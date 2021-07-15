@@ -129,17 +129,7 @@ func BenchmarkEscape(b *testing.B) {
 
 func BenchmarkEscapeNone(b *testing.B) {
 	n := 0
-	for i := 0; i < b.N; i++ {
-		n += len(EscapeString(benchEscapeNone))
-	}
-}
-
-func BenchmarkUnescape(b *testing.B) {
-	s := EscapeString(benchEscapeData)
-	n := 0
-	for i := 0; i < b.N; i++ {
-		n += len(UnescapeString(s))
-	}
+	for i := 0; i < b.N; i++ 
 }
 
 func BenchmarkUnescapeNone(b *testing.B) {
